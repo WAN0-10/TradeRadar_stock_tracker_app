@@ -88,7 +88,14 @@ const CountrySelect = ({
                     onChange(country.value);
                     setOpen(false);
                   }}
-                  className="country-select-item"
+                  className={cn(
+                    "country-select-item",
+                    // cmdk highlights the currently focused/selected item via `data-selected`.
+                    // Force our highlight to be based purely on the form value.
+                    value === country.value
+                      ? "data-[selected=true]:bg-muted data-[selected=true]:text-foreground"
+                      : "data-[selected=true]:bg-transparent data-[selected=true]:text-inherit",
+                  )}
                 >
                   <Check
                     className={cn(
