@@ -17,7 +17,7 @@ export const getAllUsersForNewsEmail = async () => {
       .toArray();
 
     return users
-      .filter((user) => user.email && user.name)
+      .filter((user) => user.email)
       .map((user) => ({
         id: user.id || user._id.toString() || "",
         email: user.email,
