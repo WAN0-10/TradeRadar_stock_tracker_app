@@ -14,7 +14,7 @@ export async function getWatchlistSymbolsByEmail(
     if (!db) throw new Error("Mongodb connection not established");
 
     const user = await db
-      .collection("users")
+      .collection("user")
       .findOne<{ _id: unknown; id?: string; email?: string }>({ email });
     if (!user) return [];
 
