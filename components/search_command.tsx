@@ -60,18 +60,11 @@ export default function SearchCommand({
     }
   };
 
-  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+  const debouncedSearch = useDebounce(handleSearch, 300);
 
   useEffect(() => {
-    // Avoid calling setState directly in an effect.
-    // Schedule the search on the next tick.
-    const id = window.setTimeout(() => {
-      void handleSearch();
-    }, 0);
-
-    return () => window.clearTimeout(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedSearchTerm]);
+    debouncedSearch();
+  }, [searchTerm, debouncedSearch]);
 
   const handleSelectStock = () => {
     setOpen(false);
