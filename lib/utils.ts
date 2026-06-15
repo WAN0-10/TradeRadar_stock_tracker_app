@@ -102,7 +102,6 @@ export const formatChangePercent = (changePercent?: number) => {
   const sign = changePercent > 0 ? "+" : "";
   return `${sign}${changePercent.toFixed(2)}%`;
 };
-};
 
 export const getChangeColorClass = (changePercent?: number) => {
   if (!changePercent) return "text-gray-400";
