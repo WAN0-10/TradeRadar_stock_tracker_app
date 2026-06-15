@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { auth } from "@/lib/better-auth/auth";
 import { getWatchlistSymbolsByEmail } from "@/lib/actions/watchlist.actions";
-
-export default async function WatchlistPage() {
 import Link from "next/link";
 import { headers } from "next/headers";
-import { auth } from "`@/lib/better-auth/auth`";
-import { getWatchlistSymbolsByEmail } from "`@/lib/actions/watchlist.actions`";
+import { auth } from "@/lib/better-auth/auth";
+import { getWatchlistSymbolsByEmail } from "@/lib/actions/watchlist.actions";
+
+export default async function WatchlistPage() {
 
 export default async function WatchlistPage() {
   const session = await auth.api.getSession({
