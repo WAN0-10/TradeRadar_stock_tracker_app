@@ -3,7 +3,15 @@ import { auth } from "@/lib/better-auth/auth";
 import { getWatchlistSymbolsByEmail } from "@/lib/actions/watchlist.actions";
 
 export default async function WatchlistPage() {
-  const session = await auth.api.getSession();
+import Link from "next/link";
+import { headers } from "next/headers";
+import { auth } from "`@/lib/better-auth/auth`";
+import { getWatchlistSymbolsByEmail } from "`@/lib/actions/watchlist.actions`";
+
+export default async function WatchlistPage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
 
   const email = session?.user?.email;
   const symbols = await getWatchlistSymbolsByEmail(email || "");
