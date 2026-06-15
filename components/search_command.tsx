@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   Command,
   CommandDialog,
@@ -40,7 +40,7 @@ export default function SearchCommand({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  const handleSearch = async () => {
+  const handleSearch = useCallback(async () => {
     const term = searchTerm.trim();
 
     if (!term) {
@@ -58,7 +58,7 @@ export default function SearchCommand({
     } finally {
       setLoading(false);
     }
-  };
+  }, [searchTerm, initialStocks]);
 
   const debouncedSearch = useDebounce(handleSearch, 300);
 
@@ -133,7 +133,7 @@ export default function SearchCommand({
                   {isSearchMode ? "Search results" : "Popular stocks"}(
                   {displayStocks?.length || 0})
                 </div>
-                {displayStocks?.map((stock, i) => (
+                {displayStocks?.map((stock) => (
                   <li key={stock.symbol} className="search-item">
                     <Link
                       href={`/stocks/${stock.symbol}`}

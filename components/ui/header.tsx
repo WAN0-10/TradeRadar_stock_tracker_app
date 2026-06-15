@@ -11,7 +11,7 @@ const Header = async ({ user }: { user: User }) => {
   } catch {
     initialStocks = [];
   }
-  return (
+
   return (
     <header className="sticky top-0 header">
       <div className="container header-wrapper flex items-center justify-between">
