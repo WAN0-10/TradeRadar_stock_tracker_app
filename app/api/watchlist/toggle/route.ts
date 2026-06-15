@@ -17,13 +17,12 @@ export async function POST(req: Request) {
     }
 
     const body = (await req.json()) as {
-      userId: string;
       symbol: string;
       company: string;
       nextInWatchlist: boolean;
     };
 
-    const userId = body.userId;
+    const userId = String(user.id || "");
     const symbol = String(body.symbol || "")
       .toUpperCase()
       .trim();
