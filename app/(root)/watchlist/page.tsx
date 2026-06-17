@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { auth } from "@/lib/better-auth/auth";
 import { getWatchlistSymbolsByEmail } from "@/lib/actions/watchlist.actions";
-import Link from "next/link";
 import { headers } from "next/headers";
-import { getWatchlistSymbolsByEmail } from "@/lib/actions/watchlist.actions";
 
 
 
