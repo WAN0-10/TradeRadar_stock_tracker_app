@@ -1,8 +1,7 @@
-/* eslint-disable react/jsx-key */
 import { auth } from "@/lib/better-auth/auth";
-import { Link } from "lucide-react";
 import { headers } from "next/headers";
 import Image from "next/image";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 const layout = async ({ children }: { children: React.ReactNode }) => {
@@ -28,17 +27,18 @@ const layout = async ({ children }: { children: React.ReactNode }) => {
       <section className="auth-right-section">
         <div className="z-10 relative lg:mt-4 lg:mb-16">
           <blockquote className="auth-blockquote">
-            Trade Radar transformed the way I read the market. The insights are
-            sharp, and I finally feel in control of every trade I make.
+            Trade Radar turned my watchlist into a winning list. The alerts are
+            spot-on, and I feel more confident making moves in the market.
           </blockquote>
           <div className="flex items-center justify-between">
             <div>
-              <cite className="auth-testimnial-author">-Ethan R.</cite>
+              <cite className="auth-testimonial-author">— Ethan R.</cite>
               <p className="max-md:text-xs text-gray-500">Retail Investor</p>
             </div>
             <div className="flex items-center gap-0.5">
               {[1, 2, 3, 4, 5].map((star) => (
                 <Image
+                  key={star}
                   src="/assets/icons/star.svg"
                   alt="Star"
                   width={20}
@@ -51,8 +51,8 @@ const layout = async ({ children }: { children: React.ReactNode }) => {
         </div>
         <div className="flex-1 relative">
           <Image
-            src="/assets/images/dashboard.png"
-            alt="Dashboard Preview"
+            src="https://ik.imagekit.io/a6fkjou7d/dashboard-preview.png?updatedAt=1756378548102"
+            alt="Trade Radar Dashboard Preview"
             width={1440}
             height={1150}
             className="auth-dashboard-preview absolute top-0"

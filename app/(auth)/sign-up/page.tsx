@@ -26,7 +26,7 @@ const SignUp = () => {
       fullName: "",
       email: "",
       password: "",
-      country: "SA",
+      country: "AU",
       investmentGoals: "Growth",
       riskTolerance: "Medium",
       preferredIndustry: "Technology",
@@ -63,7 +63,7 @@ const SignUp = () => {
         <InputField
           name="email"
           label="Email"
-          placeholder="john.doe@example.com"
+          placeholder="Enter your email"
           register={register}
           error={errors.email}
           validation={{
@@ -125,12 +125,12 @@ const SignUp = () => {
           disabled={isSubmitting}
           className="yellow-btn w-full mt-5"
         >
-          {isSubmitting ? "Creating account" : "Start your Investing Journey"}
+          {isSubmitting ? "Creating account" : "Start Your Investing Journey"}
         </Button>
 
         <FooterLink
           text="Already have an account?"
-          linkText="Sign In"
+          linkText="Log In"
           href="/sign-in"
         />
       </form>

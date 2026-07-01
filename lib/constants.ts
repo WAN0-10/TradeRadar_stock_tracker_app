@@ -2,6 +2,7 @@ export const NAV_ITEMS = [
   { href: "/", label: "Dashboard" },
   { href: "/search", label: "Search" },
   { href: "/watchlist", label: "Watchlist" },
+  { href: "/#news", label: "News" },
 ];
 
 // Sign-up form select options
@@ -55,35 +56,55 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
   symbolActiveColor: "rgba(15, 237, 190, 0.05)", // highlight color for active symbol
   tabs: [
     {
-      title: "Financial",
+      title: "Indices",
       symbols: [
-        { s: "NYSE:JPM", d: "JPMorgan Chase" },
-        { s: "NYSE:WFC", d: "Wells Fargo Co New" },
-        { s: "NYSE:BAC", d: "Bank Amer Corp" },
-        { s: "NYSE:HSBC", d: "Hsbc Hldgs Plc" },
-        { s: "NYSE:C", d: "Citigroup Inc" },
-        { s: "NYSE:MA", d: "Mastercard Incorporated" },
+        { s: "FOREXCOM:SPXUSD", d: "S&P 500" },
+        { s: "FOREXCOM:NSXUSD", d: "Nasdaq 100" },
+        { s: "FOREXCOM:DJI", d: "Dow 30" },
+        { s: "INDEX:RUT", d: "Russell 2000" },
       ],
     },
     {
-      title: "Technology",
+      title: "Stocks",
       symbols: [
         { s: "NASDAQ:AAPL", d: "Apple" },
-        { s: "NASDAQ:GOOGL", d: "Alphabet" },
         { s: "NASDAQ:MSFT", d: "Microsoft" },
-        { s: "NASDAQ:FB", d: "Meta Platforms" },
-        { s: "NYSE:ORCL", d: "Oracle Corp" },
-        { s: "NASDAQ:INTC", d: "Intel Corp" },
+        { s: "NASDAQ:GOOGL", d: "Alphabet" },
+        { s: "NASDAQ:AMZN", d: "Amazon" },
+        { s: "NASDAQ:TSLA", d: "Tesla" },
+        { s: "NASDAQ:NVDA", d: "NVIDIA" },
       ],
     },
     {
-      title: "Services",
+      title: "Crypto",
       symbols: [
-        { s: "NASDAQ:AMZN", d: "Amazon" },
-        { s: "NYSE:BABA", d: "Alibaba Group Hldg Ltd" },
-        { s: "NYSE:T", d: "At&t Inc" },
-        { s: "NYSE:WMT", d: "Walmart" },
-        { s: "NYSE:V", d: "Visa" },
+        { s: "BITSTAMP:BTCUSD", d: "Bitcoin" },
+        { s: "BITSTAMP:ETHUSD", d: "Ethereum" },
+        { s: "COINBASE:SOLUSD", d: "Solana" },
+      ],
+    },
+    {
+      title: "Forex",
+      symbols: [
+        { s: "FX:EURUSD", d: "EUR/USD" },
+        { s: "FX:GBPUSD", d: "GBP/USD" },
+        { s: "FX:USDJPY", d: "USD/JPY" },
+      ],
+    },
+    {
+      title: "Bonds",
+      symbols: [
+        { s: "TVC:US10Y", d: "US 10Y Yield" },
+        { s: "TVC:US02Y", d: "US 2Y Yield" },
+        { s: "AMEX:TLT", d: "20+ Year Treasury" },
+      ],
+    },
+    {
+      title: "ETFs",
+      symbols: [
+        { s: "AMEX:SPY", d: "SPDR S&P 500" },
+        { s: "AMEX:QQQ", d: "Invesco QQQ" },
+        { s: "AMEX:IWM", d: "Russell 2000 ETF" },
       ],
     },
   ],
@@ -126,7 +147,7 @@ export const TOP_STORIES_WIDGET_CONFIG = {
 };
 
 export const MARKET_DATA_WIDGET_CONFIG = {
-  title: "Stocks",
+  title: "Today's Top Stocks",
   width: "100%",
   height: 600,
   locale: "en",
@@ -136,35 +157,18 @@ export const MARKET_DATA_WIDGET_CONFIG = {
   backgroundColor: "#0F0F0F",
   symbolsGroups: [
     {
-      name: "Financial",
+      name: "Today's Top Stocks",
       symbols: [
-        { name: "NYSE:JPM", displayName: "JPMorgan Chase" },
-        { name: "NYSE:WFC", displayName: "Wells Fargo Co New" },
-        { name: "NYSE:BAC", displayName: "Bank Amer Corp" },
-        { name: "NYSE:HSBC", displayName: "Hsbc Hldgs Plc" },
-        { name: "NYSE:C", displayName: "Citigroup Inc" },
-        { name: "NYSE:MA", displayName: "Mastercard Incorporated" },
-      ],
-    },
-    {
-      name: "Technology",
-      symbols: [
-        { name: "NASDAQ:AAPL", displayName: "Apple" },
-        { name: "NASDAQ:GOOGL", displayName: "Alphabet" },
-        { name: "NASDAQ:MSFT", displayName: "Microsoft" },
-        { name: "NASDAQ:FB", displayName: "Meta Platforms" },
+        { name: "NASDAQ:AAPL", displayName: "Apple Inc" },
+        { name: "NASDAQ:MSFT", displayName: "Microsoft Corp" },
+        { name: "NASDAQ:GOOGL", displayName: "Alphabet Inc" },
+        { name: "NASDAQ:AMZN", displayName: "Amazon.com Inc" },
+        { name: "NASDAQ:TSLA", displayName: "Tesla Inc" },
+        { name: "NASDAQ:META", displayName: "Meta Platforms Inc" },
+        { name: "NASDAQ:NVDA", displayName: "NVIDIA Corp" },
+        { name: "NASDAQ:NFLX", displayName: "Netflix Inc" },
         { name: "NYSE:ORCL", displayName: "Oracle Corp" },
-        { name: "NASDAQ:INTC", displayName: "Intel Corp" },
-      ],
-    },
-    {
-      name: "Services",
-      symbols: [
-        { name: "NASDAQ:AMZN", displayName: "Amazon" },
-        { name: "NYSE:BABA", displayName: "Alibaba Group Hldg Ltd" },
-        { name: "NYSE:T", displayName: "At&t Inc" },
-        { name: "NYSE:WMT", displayName: "Walmart" },
-        { name: "NYSE:V", displayName: "Visa" },
+        { name: "NYSE:CRM", displayName: "Salesforce Inc" },
       ],
     },
   ],

@@ -96,7 +96,7 @@ export default function SearchCommand({
           <CommandInput
             value={searchTerm}
             onValueChange={setSearchTerm}
-            placeholder="Search stocks..."
+            placeholder="Search by symbol or company name"
             className="search-input"
           />
           {loading && <Loader2 className="search-loader" />}
@@ -113,7 +113,7 @@ export default function SearchCommand({
           ) : (
             <ul>
               <div className="search-count">
-                {isSearchMode ? "Search results" : "Popular stocks"}
+                {isSearchMode ? "Search results" : "Popular Stocks"}
                 {` `}({displayStocks?.length || 0})
               </div>
               {displayStocks?.map((stock) => (
