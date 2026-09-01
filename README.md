@@ -7,7 +7,7 @@ The application combines market data from **Finnhub**, interactive charting thro
 
 > 🚧 **Project Status:** Active development
 
-<img width="1275" height="896" alt="TradeRadar" src="" />
+<img width="1275" height="896" alt="TradeRadar" src="public/assets/images/dashboard-preview.png" />
 
 ---
 
@@ -241,6 +241,17 @@ TradeRadar is intended to grow beyond a basic stock tracker into a more complete
 Future development will focus on combining **market data, personalized watchlists, portfolio information, alerts, and automated background workflows** into a single application.
 
 ---
+## 🙏 Acknowledgements
+
+TradeRadar was developed with inspiration and guidance from the following tutorial:
+
+* **[Build and Deploy a Real-Time Stock Market App with Alerts, Charts & AI Insights | Next.js, Inngest](https://youtu.be/gu4pafNCXng)**
+
+The tutorial provided a useful reference for learning and implementing concepts involving **Next.js, Inngest, stock market data, authentication, and modern full-stack application architecture**.
+
+TradeRadar has been adapted and extended as an independent learning project, with additional development, experimentation, and implementation decisions made throughout the project.
+
+Credit and appreciation to the creator for providing the tutorial and educational material that helped inform the development of this project.
 
 ## 📄 License
 
