@@ -7,7 +7,7 @@ The application combines market data from **Finnhub**, interactive charting thro
 
 > 🚧 **Project Status:** Active development
 
-**Repository:** [WAN0-10/TradeRadar_stock_tracker_app](https://github.com/WAN0-10/TradeRadar_stock_tracker_app)
+<img width="1275" height="896" alt="TradeRadar" src="" />
 
 ---
 
